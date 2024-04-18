@@ -9,4 +9,11 @@ def create_user(user:list[dict])->None:
     posts: int = int(input("podaj liczbe postow:"))
     user: dict = {"name": name, "surname": surname, "posts": posts}
     users.append(user)
+def search(users: list[dict]) -> None:
+    user_name: str = input("kogo szukasz?:")
+    for user in users[1:]:
+        if user["name"] == user_name:
+            print(f'Twoj znajomy {user["name"]} opublikował: {user["posts"]}')
+
+
 
